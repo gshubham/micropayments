@@ -7,74 +7,43 @@ exports.index = function(req, res){
   res.render('index');
 };
 
-exports.branding = function(req,res) {
-	res.render('programs/branding');
+exports.whatIsAMicropayment = function(req,res) {
+	res.render('whatIsAMicropayment');
 };
 
-exports.eChallenge = function(req, res) {
-	res.render('programs/eChallenge');
+exports.history = function(req, res) {
+	res.render('history');
 };
 
-exports.socialEChallenge = function(req, res) {
-	res.render('programs/socialEChallenge');
+exports.technical = function(req, res) {
+	res.render('technical');
 };
 
-exports.productShowCase = function(req, res) {
-	res.render('programs/productShowCase');
+exports.social = function(req, res) {
+	res.render('social');
 };
 
-exports.eBootCamp = function(req, res) {
-	res.render('programs/eBootCamp');
+exports.economical = function(req, res) {
+	res.render('economical');
 }
-exports.etl = function(req, res) {
-	res.render('programs/etl');
+exports.payPerUse = function(req, res) {
+	res.render('payPerUse');
 }
-exports.hackspace = function(req, res) {
-	res.render('programs/hackspace');
+exports.postPaid = function(req, res) {
+	res.render('postPaid');
 }
-exports.profDev = function (req, res) {
-	res.render('programs/profDev');
+exports.prePaid = function (req, res) {
+	res.render('prePaid');
 }
-exports.core = function (req, res) {
-	res.render('programs/core');
+exports.flattr = function (req, res) {
+	res.render('flattr');
 }
-exports.freshmanBat = function (req, res) {
-	res.render('programs/freshmanBat');
+exports.paypal = function (req, res) {
+	res.render('paypal');
 }
-exports.internship = function (req, res) {
-	res.render('programs/internship');
+exports.venmo = function (req, res) {
+	res.render('venmo');
 }
-exports.pastWinners = function (req, res) {
-	res.render('history/pastWinners');
-}
-exports.alumni = function (req, res) {
-	res.render ('history/alumni');
-}
-exports.careerFairs = function (req, res) {
-	res.render ('getInvolved/careerFairs');
-}
-exports.digest = function (req, res) {
-	res.render ('getInvolved/digest');
-}
-exports.registration = function (req, res) {
-	res.render('getInvolved/registration');
-}
-
-exports.events = function (req, res) {
-	res.render('media/events');
-}
-
-exports.inTheNews = function (req, res) {
-	res.render('media/inTheNews');
-}
-exports.brandingGuideLines = function (req, res) {
-	res.render('media/brandingGuideLines');
-}
-
-exports.sponsors = function (req, res) {
-	res.render('partners/sponsors');
-}
-
-exports.boardOfAdvisors = function (req, res) {
-	res.render('partners/boardOfAdvisors');
+exports.zong = function (req, res) {
+	res.render('zong');
 }

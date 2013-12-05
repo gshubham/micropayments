@@ -128,11 +128,23 @@ hr.divider {
   padding-top: 180px;
 }
 
+
 #content > h1 > a {
   color : #990000;
 }
 #content > h1 > a:hover {
   color : #BD6F6F;
+}
+#content > .text > p > a {
+    color : #990000;
+}
+
+#content > .text > p > a:hover {
+  color : #BD6F6F;
+}
+
+#content {
+  padding-top : 50px;
 }
 #sponsors {
   background-color : #ffffff;

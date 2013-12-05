@@ -31,39 +31,18 @@ app.get('/', routes.index);
 app.get('/users', user.list);
 
 //Programs
-app.get('/programs', routes.index);
-app.get('/programs/branding', routes.branding);
-app.get('/programs/eChallenge', routes.eChallenge);
-app.get('/programs/socialEChallenge', routes.socialEChallenge);
-app.get('/programs/productShowCase', routes.productShowCase);
-app.get('/programs/eBootCamp', routes.eBootCamp);
-app.get('/programs/etl', routes.etl);
-app.get('/programs/hackspace', routes.hackspace);
-app.get('/programs/profDev', routes.profDev);
-app.get('/programs/core', routes.core);
-app.get('/programs/freshmanBat', routes.freshmanBat);
-app.get('/programs/internship', routes.internship);
-//History
-app.get('/history', routes.index);
-app.get('/history/pastWinners', routes.pastWinners);
-app.get('/history/alumni', routes.alumni);
-//Get Involved
-app.get('/getInvolved/careerFairs', routes.careerFairs);
-app.get('/getInvolved', routes.index);
-app.get('/getInvolved/digest', routes.digest);
-app.get('/getInvolved/registration', routes.registration);
-// Media
-app.get('/media', routes.index);
-app.get('/media/events', routes.events);
-app.get('/media/inTheNews', routes.inTheNews);
-app.get('/media/brandingGuideLines', routes.brandingGuideLines);
-
-//Blog
-//No pages here, just direct link
-//Partners
-app.get('/partners', routes.index);
-app.get('/partners/sponsors', routes.sponsors);
-app.get('/partners/boardOfAdvisors', routes.boardOfAdvisors);
+app.get('/whatIsAMicropayment', routes.whatIsAMicropayment);
+app.get('/history', routes.history);
+app.get('/challenges/technical', routes.technical);
+app.get('/challenges/economical', routes.economical);
+app.get('/challenges/social', routes.social);
+app.get('/businessModels/payPerUse', routes.payPerUse);
+app.get('/businessModels/postPaid', routes.postPaid);
+app.get('/businessModels/prePaid', routes.prePaid);
+app.get('/caseStudies/flattr', routes.flattr);
+app.get('/caseStudies/paypal', routes.paypal);
+app.get('/caseStudies/venmo', routes.venmo);
+app.get('/caseStudies/zong', routes.zong);
 // In case of bad routing
 //app.get('/*', routes.index);
 
