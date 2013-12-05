@@ -2,14 +2,66 @@ doctype 5
 html
 
   head
-    title Micropayments and the Web :: Technical Challenges
-    include headerFiles.jade
+    title Micropayments and the Web
+    include headerFilesOthers.jade
 
   body
-    include navBarMain.jade
-    div#home.slide.fullscreen 
-      div.banner Micropayments and the Web
-        hr.line-banner
-        div.slide-banner-motto A viable Business Model?
-
-    include footerFiles.jade
+    include navBarOthers.jade
+    div#content 
+      h1 Security
+      hr.accent
+      div.text 
+        p The major security areas that need to addressed are authentication, integrity, authorization and confidentiality. A robust and secure micropayments system would mean different things for different users. For a consumer, it means receiving authentic products that he paid for, and for the merchant it means getting the appropriate amount of money from his/her sales. 
+        p To ensure both these constraints are satisfied, a very robust infrastructure setup is required to render all data breach and fraud attempts unsuccessful.     
+        p This security layer needs to be present at two levels. First, at the level of connection established with the service, including using strong encryption, key-exchange and MAC protocols to ensure authentication and integrity of data transfer between a device and the service so that an eavesdropper is unable to listen to the exchange and tamper with it.
+        p Second, there needs to be security at the bottommost layer of data being served out of databases. These databases essentially store all the digital transactions, and changing a number in the database is equivalent to manipulating with the transaction (say changing transaction value from $2 to $200000). Therefore, the database layer must be appropriately protected and integrity must be ensured.
+        p Thus, overall, there are some nontrivial factors to consider in terms of security implementation while designing any digital micropayment system.
+      
+      h1 Scalability
+      hr.accent
+      div.text 
+        p In micropayment systems, a scalable distributed design is required to prevent the possible bottlenecks that may emerge if the system cannot respond to the requirements set by the potentially rapid increase of the transaction traffic through it. 
+        p In case of a centralized, non-distributed setup, where there is one central master server, which is trusted and is responsible for carrying out all transactions, the system not only becomes incapable of handling high traffic but also becomes highly fault susceptible. 
+        p The incapability arises in various ways: the server only has limited state and memory, and has a restriction on the number of open  connections it can sustain. Since all traffic is usually real time, the need for memory and processing power increases linearly with the number of transactions, which is not a good idea. 
+        p There is also a high probability of the whole system going down at once if there is any faults in the central master, which has been seen before in many Distributed Denial of Service (DDOS) attacks. Further, with new peer-to-peer micropayment systems, the need for decentralization becomes even more pronounced. 
+        p Thus, overall, a system in which a central master further load balances amongst various slaves will form the basis for a highly scalable micropayments system in the future, and this cannot be overlooked if the system wants to serve a high volume of requests.      
+      h1 Reliability
+      hr.accent
+      div.text 
+        p The micropayment system must serve customers 24 hours in a day and seven days a week, having no point of failure in the system at any time. Furthermore, transactions need to be cryptographically valid and secure. 
+        p Since many micropayment systems depend on cryptographic mechanisms to control credit transfers, the reliability of such systems is of considerable importance. There are continuous reports of attacks on systems such as satellite TV decoders, automatic teller machines, and utility meters – implemented in ways similar to current micropayment schemes.
+        p 
+        p To focus on this challenge, there is an unprecedented need for rigorous testing frameworks that simulate real high volume traffic on the system and helps identify bugs and pitfalls that need to be improved upon. 
+        p Having a comprehensive testing framework will allow for the integration of sanity checks in the development cycle, which will make sure that no “bad” code gets pushed out and nothing breaks on the client side. There is further a need to adhere to standards while implementing security layers and such, since cryptography is very tricky to get right.
+      h1 Interoperability
+      hr.accent
+      div.text 
+        p Interoperability in the technological dimension means that the currencies like digital cheques and tokens applied in different micropayment systems are fully interexchangeable between the systems and protocols. 
+        p This is an extremely hard problem to tackle since most micropayment services define their own tokens of virtual credits/currencies like Venmo credit, scrips etc. There is no central exchange that allows the conversion of one virtual currency to another. 
+        p As much as this is a technical challenge, it should be seen as an economic challenge of whether this is a desirable phenomenon at all. Should it be possible to convert Venmo credit to let’s say, virtual currency for accessing some gaming website? 
+        p Possibly, in case the two parties collaborate with each other, they could build an application programming interface (API) that lets them interconvert, thus allowing for greater traffic. There is thus, tremendous room for such collaborations, and in case this becomes an accepted phenomenon, it will be imperative to think of a centralized exchange for these virtual currencies : a model similar to the stock exchange.  
+      h1 Anonymity
+      hr.accent
+      div.text 
+        p Anonymity is an especially interesting requirement in respect of both the user and the implementation of the micropayment systems. The contemporary systems – like credit card and cheque based payment systems – have usually compromised the security by giving full anonymity only to the merchants, while the user has been offered only partial anonymity. 
+        p The degradation of anonymity enhances the traceability of the transactions, which has often been envisioned as the device for a Big Brother-style control from the viewpoint of the customers. The possibility to trace one’s own transactions can, however, also be seen as an advantage for the customers, since they are probably interested in a service that allows them to check what has been bought using their account.
+        p 
+        p Partial anonymity usually implicates the collecting of long-term logging data of the micropayments of the user which could yield significant information of the purchase patterns of single users, when the protection is not at adequate level. 
+        p In addition, sometimes when even a single micropayment transaction, such as request of adult content can be uncovered, the user may encounter inconveniences. This is not necessarily desirable when the identity of the user is visible to merchants and banks that can use this data to manipulate advertising and pricing models for the user.
+      h1 Data Analysis
+      hr.accent
+      div.text 
+        p Going off the discussion of anonymity, in a micropayment system, merchants might want to know user patterns of their sales, including user location, their purchase history etc in order to get to know their user base better and allow them to manipulate advertising and pricing models. 
+        p In case a micropayment system allows for this partial and complete anonymity, crunching high volume user data presents for great infrastructural challenges. Data mining and organization is resource intensive and there would be a need to develop web (Hadoop – Mapreduce) clusters in order to implement this feature. 
+        p Furthermore, if the focus is also to understand its own user base and user patterns, there is a possibility of delving into recommendations of products/services etc. which would involve the use of machine learning and AI capabilities. Thus, we can see that many technical challenges within the realm of data could be realized depending on the path the micropayment system chooses to take.
+      h1 References
+      hr.accent
+      div.text 
+        p <a href = "http://www.tml.tkk.fi/Opinnot/Tik-110.501/1999/papers/micropayments/#sect5"> http://www.tml.tkk.fi/Opinnot/Tik-110.501/1999/papers/micropayments/#sect5 </a>
+        p <a href = "http://uidai.gov.in/UID_PDF/Front_Page_Articles/Strategy/Exclusion_to_Inclusion_with_Micropayments.pdf"> http://uidai.gov.in/UID_PDF/Front_Page_Articles/Strategy/Exclusion_to_Inclusion_with_Micropayments.pdf </a>
+        p <a href = "http://infolab.stanford.edu/~byang/pubs/ppay.ps" > http://infolab.stanford.edu/~byang/pubs/ppay.ps </a>
+        p <a href = "http://edoc.hu-berlin.de/series/sfb-373-papers/1998-66/PDF/66.pdf" > http://edoc.hu-berlin.de/series/sfb-373-papers/1998-66/PDF/66.pdf </a>
+        p <a href = "http://studwww.eurecom.fr/~lehmann/study/allin1.html" > http://studwww.eurecom.fr/~lehmann/study/allin1.html </a>       
+        p <a href = "http://www.millicent.digital.com/works/white_papers/executive/" > http://www.millicent.digital.com/works/white_papers/executive/ </a>
+        p <a href = "http://www.systechcanada.com/news/story6.html"> http://www.systechcanada.com/news/story6.html </a>
+    include footerFilesOthers.jade   
