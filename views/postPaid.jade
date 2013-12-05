@@ -2,14 +2,28 @@ doctype 5
 html
 
   head
-    title Micropayments and the Web :: Postpaid Model
-    include headerFiles.jade
+    title Micropayments and the Web
+    include headerFilesOthers.jade
 
   body
-    include navBarMain.jade
-    div#home.slide.fullscreen 
-      div.banner Micropayments and the Web
-        hr.line-banner
-        div.slide-banner-motto A viable Business Model?
-
-    include footerFiles.jade
+    include navBarOthers.jade
+    div#content 
+      h1 Overview
+      hr.accent
+      div.text 
+        p The postpaid model allows user to pay after making a series of purchases. It is an alternative to pay-per-use because it aggregates micro transacations into a single bill as opposed to charging users individually.
+      h1 Advantages
+      hr.accent
+      div.text 
+        ul.textList
+         li Merchants benefit from impulse buying, as discussed in prepaid
+         li Just like with the prepaid model, aggregating payments allows merchants to incur reduced transaction fees
+         li Users do not feel any obligation to purchase a certain amount of the service as they are only billed for what they consume, unlike with the prepaid model where their prepayment represents a fixed quantity of the merchant’s service
+      h1 Disadvantages
+      hr.accent
+      div.text 
+        ul.textList
+         li If users purchase a single item, say a $1.99 article, and not anything else, merchants will have to process the sole transaction and incur processing fees.
+         li This model makes services less accessible to the underbanked as it requires a debit or credit card to make payments
+    
+    include footerFilesOthers.jade   

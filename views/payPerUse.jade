@@ -2,14 +2,30 @@ doctype 5
 html
 
   head
-    title Micropayments and the Web :: Pay-per-use Model
-    include headerFiles.jade
+    title Micropayments and the Web
+    include headerFilesOthers.jade
 
   body
-    include navBarMain.jade
-    div#home.slide.fullscreen 
-      div.banner Micropayments and the Web
-        hr.line-banner
-        div.slide-banner-motto A viable Business Model?
+    include navBarOthers.jade
+    div#content 
+      h1 Overview
+      hr.accent
+      div.text 
+        p This model charges users on the fly for purchases that they would like to make. For example, if the user wants to purchase access to a single article on a news publishing site or a virtual good (such as currency on Zynga), their credit card will be charged for the amount.        
+      h1 Advantages
+      hr.accent
+      div.text 
+        ul.textList
+         li Users only purchase what they want and when they want
+         li Users are not barred from access to a merchant’s services through more expensive long term subscription plans.
+         li Allows users to engage in a “trial” experience of a merchant’s offerings
+         li Low prices benefit merchants by encouraging users to engage in “impulse” buying, similar to the purchase of low cost candy bars, lip balms and chewing gum in check out lanes at retailers. 
+         li Users face low switching costs if they want to switch to a competing service
+      h1 Disadvantages
+      hr.accent
+      div.text 
+        ul.textList
+         li Retailers must incur fixed transaction costs (often a percentage of the amount) for small transactions, which affects their earnings
+         li It is difficult to achieve vendor lock-in or benefit from recurring revenue streams with a pay-per-use model. For every transaction, merchants need to persuade customers to buy services through advertisements and incentives. A prepaid model ensures a guaranteed revenue stream for the merchant.
 
-    include footerFiles.jade
+    include footerFilesOthers.jade   

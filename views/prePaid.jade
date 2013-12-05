@@ -2,14 +2,31 @@ doctype 5
 html
 
   head
-    title Micropayments and the Web :: Prepaid Model
-    include headerFiles.jade
+    title Micropayments and the Web
+    include headerFilesOthers.jade
 
   body
-    include navBarMain.jade
-    div#home.slide.fullscreen 
-      div.banner Micropayments and the Web
-        hr.line-banner
-        div.slide-banner-motto A viable Business Model?
-
-    include footerFiles.jade
+    include navBarOthers.jade
+    div#content 
+      h1 Overview
+      hr.accent
+      div.text 
+        p The prepaid model allows customers to authorize the merchant to charge their credit card for a certain amount (that is often converted to a virtual currency, such as Zynga’s game currency). 
+        p The pre loaded currency can then be used to purchase any service that the merchant is offering. This model also includes gift cards that can be purchased in check out lines of retail stores such as Target and Walmart. Customers can enter the scratch code at the back of these cards to credit their account with the virtual currency of the merchant.
+        p 
+        p This model also includes subscription models where users pay for monthly or yearly access to certain content upfront. This is particularly prevalent with newspapers (Wall Street Journal) and streaming services like Netflix.
+      h1 Advantages
+      hr.accent
+      div.text 
+        ul.textList
+         li More efficient in terms of reduced costs of processing transactions.
+         li Gift cards open doors to a larger customer base, particularly the underbanked, who may not have access to credit cards to use online.
+         li Recurring revenue stream for merchants, particularly for longer duration subscriptions such as yearly subscriptions. Improved customer retention allows for the development of a merchant-customer bond.
+      h1 Disadvantages
+      hr.accent
+      div.text 
+        ul.textList
+         li Merchants incur distribution costs for gift and prepaid cards in brick and mortar stores.
+         li It is more difficult for users to switch to a competitor because they have paid up front for a certain period of time for access.
+         li Users are less likely to spend on a subscription model as it is a bigger commitment than a pay-per-use spending.
+    include footerFilesOthers.jade   
