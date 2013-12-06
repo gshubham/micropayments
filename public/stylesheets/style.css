@@ -121,7 +121,7 @@ hr.divider {
 }
 
 #home {
-  background-image: url('/images/basesCover.png');
+  background-image: url('/images/tinymoney.jpg');
   background-position: center;
   background-size: cover;
   -webkit-background-size: cover;
@@ -130,15 +130,6 @@ hr.divider {
   padding-top: 180px;
 }
 
-#eChallenge {
-  background-image: url('/images/eChallenge.jpg');
-  background-position: center;
-  background-size: cover;
-  -webkit-background-size: cover;
-     -moz-background-size: cover;
-       -o-background-size: cover;
-  padding-top: 180px;
-}
 
 /*Bootstrap overrides*/
 hr {

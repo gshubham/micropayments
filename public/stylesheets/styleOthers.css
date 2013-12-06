@@ -143,6 +143,15 @@ hr.divider {
   color : #BD6F6F;
 }
 
+#content > .text > .textList > li > a {
+    color : #990000;
+}
+
+
+#content > .text > .textList > li > a:hover {
+  color : #BD6F6F;
+}
+
 #content {
   padding-top : 50px;
 }
